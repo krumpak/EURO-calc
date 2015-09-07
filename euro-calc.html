@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Kalkulator valut</title>
+<script>
+function Pretvornik(){
+	var vrednost = document.getElementById("vnos").value;
+	document.getElementById("pretvorba").value = vrednost * document.getElementById("valuta").value;
+	}
+</script>
+</head>
+<body>
+<input type="number" placeholder="Vpišite znesek v EUR" id="vnos" onKeyPress="Pretvornik();" onChange="Pretvornik();" />
+<input type="text" disabled id="pretvorba" />
+<select id="valuta" onChange="Pretvornik();">
+	<option value="" selected></option>
+	<option value="1.1255">USD</option>
+	<option value="7.5535">HRK</option>
+	<option value="0.7369">GBP</option>
+	<option value="135.21">JPY</option>
+</select>
+</body>
+</html>
