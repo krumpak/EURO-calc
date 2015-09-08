@@ -11,22 +11,21 @@ function Pretvornik(){
 </script>
 <link href="bootstrap.min.css" rel="stylesheet" type="text/css">
 <style>
-input {
-	width:100%;
+input, #valuta, select, option, .centriranje { 
 	font-size:50px;
-	}
-select, option { font-size:50px; }
+	width:100%;
+	text-align:center; }
 </style>
 </head>
 <body>
 <div class="container-fluid">
 <div class="row">
   <div class="col-md-4"></div>
-  <div class="col-md-4">
+  <div class="col-md-4 centriranje">
   <img src="euro.jpg" />
-  Pretvornik valut.<br />
   <br />
-<input type="number" placeholder="Vpišite znesek v EUR" id="vnos" onKeyPress="Pretvornik();" onChange="Pretvornik();" />
+  <br />
+<input type="number" placeholder="Vpišite v EUR" id="vnos" onKeyPress="Pretvornik();" onChange="Pretvornik();" />
 <input type="text" disabled id="pretvorba" />
 <select id="valuta" onChange="Pretvornik();">
 	<option value="" selected></option>
