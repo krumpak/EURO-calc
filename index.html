@@ -2,15 +2,20 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Kalkulator valut</title>
+<title>EURO kalkulator valut</title>
 <script>
 function Pretvornik(){
 	var vrednost = document.getElementById("vnos").value;
 	document.getElementById("pretvorba").value = vrednost * document.getElementById("valuta").value;
 	}
 </script>
+<link href="bootstrap.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+<div class="container-fluid">
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
 <input type="number" placeholder="Vpišite znesek v EUR" id="vnos" onKeyPress="Pretvornik();" onChange="Pretvornik();" />
 <input type="text" disabled id="pretvorba" />
 <select id="valuta" onChange="Pretvornik();">
@@ -20,5 +25,9 @@ function Pretvornik(){
 	<option value="0.7369">GBP</option>
 	<option value="135.21">JPY</option>
 </select>
+  </div>
+  <div class="col-md-4"></div>
+</div>
+</div>
 </body>
 </html>
